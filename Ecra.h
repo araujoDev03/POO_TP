@@ -19,7 +19,7 @@ public:
     void escreveCarater(char c);
     void escreveTexto(const char* texto);
     void desenhaMoldura(int linha, int coluna, int altura, int largura);
-    void mostra() const;
+    void mostra(int maxLinhas = 40, int maxColunas = 80);
 };
 
 #endif

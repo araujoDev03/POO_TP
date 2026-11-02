@@ -11,7 +11,7 @@ int main() {
     meuEcra.limpa();
     Fabrica minhaFabrica(10, 15);
     minhaFabrica.desenha(meuEcra);
-    meuEcra.mostra();
+    meuEcra.mostra(minhaFabrica.getLinhas() + 3, minhaFabrica.getColunas() + 5);
 
     minhaFabrica.lposicao(2, 3);
 

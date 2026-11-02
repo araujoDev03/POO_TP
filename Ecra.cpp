@@ -59,9 +59,9 @@ void Ecra::desenhaMoldura(int linha, int coluna, int altura, int largura) {
     }
 }
 
-void Ecra::mostra() const {
-    for (int i = 0; i < MAX_LINHAS; ++i) {
-        for (int j = 0; j < MAX_COLUNAS; ++j) {
+void Ecra::mostra(int maxLinhas, int maxColunas){
+    for (int i = 0; i < maxLinhas; ++i) {
+        for (int j = 0; j < maxColunas; ++j) {
             std::cout << buffer[i][j];
         }
         std::cout << '\n';

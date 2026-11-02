@@ -8,7 +8,6 @@ Fabrica::Fabrica(int l, int c) {
     creditos = Settings::fabrica_creditos_iniciais;
     instante = 0;
 
-    // Inicializa tudo a solo (' ')
     for (int i = 0; i < linhas; ++i) {
         for (int j = 0; j < colunas; ++j) {
             grelha[i][j] = ' ';
