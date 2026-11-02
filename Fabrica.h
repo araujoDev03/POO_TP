@@ -19,7 +19,8 @@ public:
     
     void inicializaAleatorio();
     void desenha(Ecra& ecra) const;
-    
+    void lposicao(int l, int c) const;
+
     int getLinhas() const { return linhas; }
     int getColunas() const { return colunas; }
 };

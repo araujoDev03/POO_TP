@@ -89,3 +89,27 @@ void Fabrica::desenha(Ecra& ecra) const {
         }
     }
 }
+
+void Fabrica::lposicao(int l, int c) const {
+    if (l < 0 || l >= linhas || c < 0 || c >= colunas) {
+        std::cout << "\nPosicao fora dos limites da fabrica!\n";
+        return;
+    }
+
+    std::cout << "\n--- Informacao da Posicao (" << static_cast<char>('A' + l) << static_cast<char>('A' + c) << ") ---\n";
+    char tipo = grelha[l][c];
+    if (tipo == ' ') {
+        std::cout << "Terreno: Solo livre\n";
+    } else if (tipo == '#') {
+        std::cout << "Terreno: Cratera\n";
+    } else if (tipo == '%') {
+        std::cout << "Terreno: Deposito de Ferro\n";
+        std::cout << "Quantidade disponivel: " << quantidadeMaterial[l][c] << " unidades\n";
+    } else if (tipo == '$') {
+        std::cout << "Terreno: Deposito de Silicio Bruto\n";
+        std::cout << "Quantidade disponivel: " << quantidadeMaterial[l][c] << " unidades\n";
+    } else if (tipo == '~') {
+        std::cout << "Terreno: Deposito de Gelo\n";
+        std::cout << "Quantidade disponivel: " << quantidadeMaterial[l][c] << " unidades\n";
+    }
+}
