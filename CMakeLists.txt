@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(POO_TP main.cpp
         Ecra.cpp
-        Ecra.h)
+        Ecra.h
+        Fabrica.cpp
+        Fabrica.h)
